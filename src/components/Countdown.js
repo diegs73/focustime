@@ -6,12 +6,12 @@ import { colors } from '../utils/colors';
 
 const minutesToMillis = (min) => min * 1000 * 60;
 const formatTime = (time) => (time < 10 ? `0${time}` : time);
-
 export const Countdown = ({ minutes = 0.1, isPaused, onProgress, onEnd }) => {
-
   const interval = React.useRef(null);
+
   const [millis, setMillis] = useState(null);
-  const reset = () => setMillis(minutesToMillis(minutes));
+
+  const reset = () => setMillis(minutesToMillis(minutes))
 
   const countDown = () => {
     setMillis((time) => {
@@ -61,4 +61,4 @@ const styles = StyleSheet.create({
     padding: spacing.lg,
     backgroundColor: 'rgba(94, 132, 226, 0.3)',
   },
-});
+}); 
